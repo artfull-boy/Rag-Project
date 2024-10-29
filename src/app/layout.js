@@ -1,16 +1,9 @@
-import localFont from "next/font/local";
-import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import "./globals.css";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
+
 
 export const metadata = {
   title: "Create Next App",
@@ -21,9 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.className} bg-white flex flex-col justify-center w-full h-[100vh] items-center`}
       >
         {children}
+        <footer className="absolute bottom-[43px] text-[#71717A]">Powered by <span className="font-bold text-black">X</span></footer>
       </body>
     </html>
   );
