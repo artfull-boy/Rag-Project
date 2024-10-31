@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Success() {
-
+  const [hello, sethello] = useState();
+  const [first, setfirst] = useState(second)
   return (
     <div
       className="w-[420px] font-[inter] flex flex-col items-start bg-white border-[1px] p-[32px] rounded-[12px] border-[#E4E4E7]"

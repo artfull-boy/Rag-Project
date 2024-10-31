@@ -13,7 +13,6 @@ export default function Home() {
   const [files, setFiles] = useState([]);
   const [progress, setProgress] = useState(0);
   const router = useRouter();
-
   useEffect(() => {
     if (activeTab == "analyzing") {
       const totalTime = 10000;
